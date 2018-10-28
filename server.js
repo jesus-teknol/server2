@@ -21,7 +21,22 @@ const DataClientMsg = require('./dataClientMsgModel') ///nombre archivo dataClie
 
 ///READ  default navegadores
 app.get('/',function(request,response){
-	response.send("Petición tipo GET nodemon node.js JASHIMOTO TEST");
+	let msgToDev = {
+		"GET https://monitoreo-controladores.herokuapp.com/helpme/   -----> Info"+
+		" "
+		+"PUT HerkuURl + /api/v1/dataClientMsg/:aid  ---------> Actualiza datos de cada cliente"
+		+"GET HerkuURl + /api/v1/dataClientMsg/:client  ---------> Adquiere el registro completo de datos de un cliente. Requiere el nombre del 'cliente' se utlizara solo para adquirir el id"
+		+"GET HerkuURl + /frontEnd/v1/estaciones/  ---------> Aquiere la informacion disponible de los datos de todas las estacioes"
+		+"POST HerkuURl + /frontEnd/v1/estaciones/  ---------> Permite al FrontEnd crear el registro que necesita el cliente actualizar con los datos medidos"
+		+"DELETE HerkuURl + /frontEnd/v1/estaciones/:aid ----> Borra el registro de una de las estaciones de dataClient. Nota: debe borrarse tambien el registro de mensajes"
+		+"GET HerkuURl + /frontEnd/message/estaciones/ -------> Adquiere toda la información almacenada en los registros de mensajes"
+		+"POST HerkuURl + /frontEnd/message/estaciones/ -----> Genera el registro donde el cliente y fronEnd se comunicarán"
+		+"DELETE HerkuURl + /frontEnd/message/estaciones/:aid ---> Borra el registro de comunicacion de mensajes Cliente <=>FrontEnd"
+		+"GET HerkuURl + /frontEnd/message/estaciones/:client ----> Adquiere el registro de mensajes de un cliente en especifico"
+		+"PUT HerkuURl + /frontEnd/message/estaciones/:aid ------> Actualiza el registro de mensajes entre Client <=>FrontEnd"  
+		
+	};
+	response.send("Petición tipo GET nodemon node.js JASHIMOTO TEST <br> Hola");
 });
 
 ///CRUD
