@@ -1,0 +1,54 @@
+Estructura
+1 Mensaje de prueba    checked
+app.get('/',function(request,response)
+
+///////////////////////
+Acceso del Cliente remoto
+2 Actualiza datos de cada cliente
+    Requiere "Id" del cliente (requiere primero obtener el registro mas reciente)
+    (checked)
+app.put('/api/v1/dataClientMsg/:aid',(request,response)=>{
+
+3 Adquiere el registro completo de datos de un cliente
+    Requiere el nombre del "cliente" 
+    se utlizara solo para adquirir el id
+    (checked)
+app.get('/api/v1/dataClientMsg/:client',(request,response)=>{
+
+////////////////////////
+Acceso del FrontEnd
+4 Aquiere la informacion disponible de los datos de 
+  todas las estacioes      (checked)
+app.get('/frontEnd/v1/estaciones/',(request,response)=>{
+
+5 Permite al FrontEnd crear el registro que
+  necesita el cliente actualizar con los datos 
+  medidos (Checked)
+app.post('/frontEnd/v1/estaciones/',(request,response)=>{
+
+6 Borra el registro de una de las estaciones de dataClient
+  Nota: debe borrarse tambien el registro de mensajes
+ (Checked debe obtenerse primero el ID)
+app.delete('/frontEnd/v1/estaciones/:aid',(request,response)=>{
+
+7 Adquiere toda la información almacenada en los
+  registros de mensajes
+
+app.get('/frontEnd/message/estaciones/',(request,response)=>{
+
+8 Genera el registro donde el cliente y fronEnd se
+  se comunicarán 
+app.post('/frontEnd/message/estaciones/',(request,response)=>{
+
+9 Borra el registro de comunicacion de mensajes Cliente <=>FrontEnd
+app.delete('/frontEnd/message/estaciones/:aid',(request,response)=>{
+
+////Manejador de Mensajes (cliente y FrontEnd)
+
+10 Adquiere el registro de mensajes de un cliente en especifico
+
+app.get('/frontEnd/message/estaciones/:client',(request,response)=>{
+
+11 Actualiza el registro de mensajes entre Client <=>FrontEnd
+app.put('/frontEnd/message/estaciones/:aid',(request,response)=>{
+
