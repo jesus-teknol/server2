@@ -20,7 +20,7 @@ const Message = require('./messageModel') ///nombre archivo messageModel.js
 const DataClientMsg = require('./dataClientMsgModel') ///nombre archivo dataClientMsg.js 
 
 ///READ  default navegadores
-app.get('/help/',function(request,response){
+app.get('/',function(request,response){
 	let msgToDev = [
 		"GET https://monitoreo-controladores.herokuapp.com/helpme/   -----> Info"
 		,"<br>Comando Datos Estaciones"
@@ -41,9 +41,7 @@ app.get('/help/',function(request,response){
 	response.send("Petición tipo GET nodemon node.js JASHIMOTO TEST <br>"+msgToDev.join("<br>"));
 });
 
-app.get('/',function(request,response){
-	response.send("Petición tipo GET nodemon node.js JASHIMOTO TEST ");
-});
+
 ///CRUD
 // base de datos para almacenamiento de datos medidos
 ///Crud dataClientMsg para los módulos 
