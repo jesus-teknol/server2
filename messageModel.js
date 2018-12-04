@@ -13,7 +13,8 @@ const messageSchema = new Schema({
     adj_R1:Number, 
     adj_R2:Number, 
     TPR:Number,
-    controlStatus:Number
+    controlStatus:Number,
+    timeStamp:String
 });
 
 let Message = mongoose.model('message',messageSchema);

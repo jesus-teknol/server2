@@ -21,7 +21,8 @@ const dataClientMsgSchema = new Schema({
     temp_min:Number, 
     adj_R1:Number, 
     adj_R2:Number, 
-    TPR:Number
+    TPR:Number,
+    timeStamp: String
     }]
 });
 
