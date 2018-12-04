@@ -1,4 +1,4 @@
-/**
+/****
  * Definimos tipo de datos  mensajes con datos del sistema
  * seria el equivalente de una tabla
  */

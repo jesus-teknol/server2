@@ -1,4 +1,4 @@
-/**
+/***
  * Configuración de mongoose
  */
 const mongoose = require("mongoose");

@@ -1,4 +1,4 @@
-/**
+/***
  * Definimos tipo de datos para Mensajes de control
  * seria el equivalente de una tabla
  */
