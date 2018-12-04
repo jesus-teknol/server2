@@ -22,7 +22,8 @@ const DataClientMsg = require('./dataClientMsgModel') ///nombre archivo dataClie
 ///READ  default navegadores
 app.get('/',function(request,response){
 	let msgToDev = [
-		"GET https://monitoreo-controladores.herokuapp.com/helpme/   -----> Info"
+		"GET https://monitoreo-controladores.herokuapp.com/   -----> Info"
+		,"timeStamp added, version 1.0"
 		,"<br>Comando Datos Estaciones"
 		,"PUT HerkuURl + /api/v1/dataClientMsg/:aid  ---------> Actualiza datos de cada cliente"
 		,"GET HerkuURl + /api/v1/dataClientMsg/:client  ---------> Adquiere el registro completo de datos de un cliente. Requiere el nombre del 'cliente' se utlizara solo para adquirir el id"
